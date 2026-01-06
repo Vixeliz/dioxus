@@ -140,9 +140,9 @@ pub fn launch_cfg_with_props<P: Clone + 'static, M: 'static>(
             ..Default::default()
         },
     );
-    #[cfg(not(all(target_os = "ios", target_abi = "sim")))]
-    let renderer = DioxusNativeWindowRenderer::with_features_and_limits(features, limits);
-    #[cfg(all(target_os = "ios", target_abi = "sim"))]
+    //#[cfg(not(all(target_os = "ios", target_abi = "sim")))]
+    //let renderer = DioxusNativeWindowRenderer::with_features_and_limits(features, limits);
+    //#[cfg(all(target_os = "ios", target_abi = "sim"))]
     let renderer = DioxusNativeWindowRenderer::new();
     let config = WindowConfig::with_attributes(
         Box::new(doc) as _,
