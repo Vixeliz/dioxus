@@ -15,7 +15,6 @@ pub use anyrender_vello::VelloWindowRenderer as InnerRenderer;
 #[cfg(all(target_os = "ios", target_abi = "sim"))]
 pub use anyrender_vello_cpu::VelloCpuWindowRenderer as InnerRenderer;
 
-#[cfg(not(all(target_os = "ios", target_abi = "sim")))]
 pub fn use_wgpu<T: CustomPaintSource>(create_source: impl FnOnce() -> T) -> u64 {
     use dioxus_core::{consume_context, use_hook_with_cleanup};
 
