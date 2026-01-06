@@ -26,7 +26,6 @@ use assets::DioxusNativeNetProvider;
 pub use dioxus_application::{DioxusNativeApplication, DioxusNativeEvent};
 pub use dioxus_renderer::{DioxusNativeWindowRenderer, Features, Limits};
 
-#[cfg(not(all(target_os = "ios", target_abi = "sim")))]
 pub use dioxus_renderer::use_wgpu;
 
 use blitz_shell::{create_default_event_loop, BlitzShellEvent, Config, WindowConfig};
